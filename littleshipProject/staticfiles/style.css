@@ -1,0 +1,15 @@
+#titulo {
+    background-color: #6fa89a;
+    color: white;
+    padding: 15px;
+    margin: 0px
+}
+
+body {
+    background-color: #d8d8d8;
+}
+
+#assuntoBotao {
+    padding: 15px;
+    border-radius: 50px;
+}

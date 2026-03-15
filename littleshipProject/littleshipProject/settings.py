@@ -21,9 +21,7 @@ SECRET_KEY = 'django-insecure-50+z&hl4pqugzeu1!g=#kylweb4l@_b@g%y+!1cemh0a)%92$-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [
-    "littleship.onrender.com"
-]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -105,8 +103,10 @@ USE_I18N = True
 
 USE_TZ = True
 
-STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR /'staticfiles'
+STATIC_URL = '/static/'
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 STATICFILES_DIRS = [
-    'static'
+    BASE_DIR / 'static'
 ]

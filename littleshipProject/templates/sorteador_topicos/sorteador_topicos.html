@@ -6,7 +6,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sorteador de tópicos</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+        body {
+            background-color: #d8d8d8;
+        }
+
+        #assuntoBotao {
+            padding: 15px;
+            border-radius: 50px;
+        }
+    </style>
 </head>
 <body>
     <h1>O gerador de tópicos!</h1>
@@ -15,6 +24,20 @@
     <button id="assuntoBotao" onclick="gerarAssunto()">Gerar assunto</button>
     <p id="assunto"></p>
 
-    <script src="{% static 'index.js' %}"></script>
+    <script>
+        let arrayAssuntos = [
+            'Comidas', 'Músicas', 'Teorias', 'Jogos',
+            'Curiosidades aleatórias','Filmes', 'Séries', 'Preferências dos E.T.s',
+            'Memes'
+        ];
+        let assuntoInt;
+
+
+        function gerarAssunto() {
+            assuntoInt = Math.floor(Math.random() * arrayAssuntos.length);
+            document.getElementById('assunto').textContent = `Porquê vocês não conversam sobre ${arrayAssuntos[assuntoInt]}?`;
+            console.log(assuntoInt) // Debug
+        }
+    </script>
 </body>
 </html>
