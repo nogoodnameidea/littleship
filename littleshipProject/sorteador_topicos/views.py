@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
 def sorteador_topicos(request):
-    return HttpResponse('<button>Olha isso!</button>')
+    return render(request, 'sorteador_topicos/sorteador_topicos.html')

@@ -16,9 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.shortcuts import render
 from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('topicos/', include('sorteador_topicos.urls'))
+    path('topicos/', include('sorteador_topicos.urls')),
+    path('index/', views.index_page)
 ]
