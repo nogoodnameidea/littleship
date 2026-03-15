@@ -1,11 +1,20 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sorteador de tópicos</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
-    <button>Olha isso!</button>
+    <h1>O gerador de tópicos!</h1>
+    <a href="/index/"><h2>Página Principal</h2></a>
+    <p>Sem ideia do que falar com os outros E.T.s? Basta usar o gerador de tópicos!</p>
+    <button id="assuntoBotao" onclick="gerarAssunto()">Gerar assunto</button>
+    <p id="assunto"></p>
+
+    <script src="{% static 'index.js' %}"></script>
 </body>
 </html>
